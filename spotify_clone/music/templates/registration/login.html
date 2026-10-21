@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <style>
+        body { background:#121212; color:#fff; font-family:Arial,sans-serif; padding:32px; }
+        a { color:#1db954; }
+    </style>
+</head>
+<body>
+    <h1>Вход</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Войти</button>
+    </form>
+    <p><a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'track_list' %}">На главную</a></p>
+</body>
+</html>
